@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package github.com.norovone.bigtech_go_msa_hw.chat;
+
+import "proto/messages.proto";
+
+option go_package = "chat/api;chat";
+
+service ChatService {
+  rpc CreateDirectChat(CreateDirectChatRequest) returns (CreateDirectChatResponse) {}
+  
+  rpc GetChat(GetChatRequest) returns (GetChatResponse) {}
+  
+  rpc ListUserChats(ListUserChatsRequest) returns (ListUserChatsResponse) {}
+  
+  rpc ListChatMembers(ListChatMembersRequest) returns (ListChatMembersResponse) {}
+  
+  rpc SendMessage(SendMessageRequest) returns (SendMessageResponse) {}
+  
+  rpc ListMessages(ListMessagesRequest) returns (ListMessagesResponse) {}
+  
+  rpc StreamMessages(StreamMessagesRequest) returns (stream StreamMessagesResponse) {}
+}

@@ -28,6 +28,15 @@ services:
       - go-network
     restart: unless-stopped
 
+  chat:
+    build: ./chat
+    container_name: chat_service
+    ports:
+      - "8085:8085"
+    networks:
+      - go-network
+    restart: unless-stopped
+
 networks:
   go-network:
     driver: bridge

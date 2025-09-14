@@ -1,0 +1,100 @@
+syntax = "proto3";
+
+package github.com.norovone.bigtech_go_msa_hw.chat;
+
+option go_package = "chat/api;chat";
+
+enum ErrorCode {
+  ERROR_CODE_UNSPECIFIED = 0;
+  ERROR_CODE_ALREADY_EXISTS = 1;
+  ERROR_CODE_INVALID_ARGUMENT = 2;
+  ERROR_CODE_NOT_FOUND = 3;
+  ERROR_CODE_PERMISSION_DENIED = 4;
+}
+
+message Error {
+  ErrorCode code = 1 [json_name = "code"];
+  string message = 2 [json_name = "message"];
+}
+
+message CreateDirectChatRequest {
+  string participant_id = 1 [json_name = "participant_id"];
+}
+
+message CreateDirectChatResponse {
+  string chat_id = 1 [json_name = "chat_id"];
+}
+
+message GetChatRequest {
+  string chat_id = 1 [json_name = "chat_id"];
+}
+
+message GetChatResponse {
+  Chat chat = 1 [json_name = "chat"];
+}
+
+message ListUserChatsRequest {
+  string user_id = 1 [json_name = "user_id"];
+}
+
+message ListUserChatsResponse {
+  repeated Chat chats = 1 [json_name = "chats"];
+}
+
+message ListChatMembersRequest {
+  string chat_id = 1 [json_name = "chat_id"];
+}
+
+message ListChatMembersResponse {
+  repeated string user_ids = 1 [json_name = "user_ids"];
+}
+
+message SendMessageRequest {
+  string chat_id = 1 [json_name = "chat_id"];
+  string text = 2 [json_name = "text"];
+}
+
+message SendMessageResponse {
+  Message message = 1 [json_name = "message"];
+}
+
+message ListMessagesRequest {
+  string chat_id = 1 [json_name = "chat_id"];
+  int32 limit = 2 [json_name = "limit"];
+  optional string cursor = 3 [json_name = "cursor"];
+}
+
+message ListMessagesResponse {
+  repeated Message messages = 1 [json_name = "messages"];
+  optional string next_cursor = 2 [json_name = "next_cursor"];
+}
+
+message StreamMessagesRequest {
+  string chat_id = 1 [json_name = "chat_id"];
+  optional int64 since_unix_ms = 2 [json_name = "since_unix_ms"];
+}
+
+message StreamMessagesResponse {
+  Message message = 1 [json_name = "message"];
+}
+
+message Chat {
+  string id = 1 [json_name = "id"];
+  ChatType type = 2 [json_name = "type"];
+  string title = 3 [json_name = "title"];
+  repeated string participant_ids = 5 [json_name = "participant_ids"];
+}
+
+enum ChatType {
+  CHAT_TYPE_UNSPECIFIED = 0;
+  CHAT_TYPE_DIRECT = 1;
+  CHAT_TYPE_GROUP = 2;
+  CHAT_TYPE_CHANNEL = 3;
+}
+
+message Message {
+  string id = 1 [json_name = "id"];
+  string chat_id = 2 [json_name = "chat_id"];
+  string sender_id = 3 [json_name = "sender_id"];
+  string text = 4 [json_name = "text"];
+}
