@@ -48,9 +48,9 @@ func main() {
 	}
 
 	server := grpc.NewServer()
-	pb.RegisterAuthServiceServer(server, implementation) // регистрация обработчиков
+	pb.RegisterAuthServiceServer(server, implementation)
 
-	reflection.Register(server) // регистрируем дополнительные обработчики
+	reflection.Register(server)
 
 	log.Printf("server listening at %v", lis.Addr())
 	if err := server.Serve(lis); err != nil {

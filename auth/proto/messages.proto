@@ -4,43 +4,36 @@ package github.com.norovone.bigtech_go_msa_hw.auth;
 
 option go_package = "auth/api;auth";
 
-// Запрос для регистрации
 message RegisterRequest {
   string email = 1 [json_name = "email"];
   string password = 2 [json_name = "password"];
 }
 
-// Ответ на регистрацию
 message RegisterResponse {
   string user_id = 1 [json_name = "user_id"];
 }
 
-// Запрос для логина
 message LoginRequest {
   string email = 1  [json_name = "email"];
   string password = 2 [json_name = "password"];
 }
 
-// Ответ на логин
 message LoginResponse {
   string access_token = 1 [json_name = "access_token"];
   string refresh_token = 2 [json_name = "refresh_token"];
   string user_id = 3 [json_name = "user_id"];
 }
 
-// Запрос для обновления токенов
 message RefreshRequest {
   string refresh_token = 1 [json_name = "refresh_token"];
 }
 
-// Ответ на обновление токенов
 message RefreshResponse {
   string access_token = 1 [json_name = "access_token"];
   string refresh_token = 2 [json_name = "refresh_token"];
   string user_id = 3 [json_name = "user_id"];
 }
 
-// Перечисление ошибок
 enum ErrorCode {
   ERROR_CODE_UNSPECIFIED = 0;
   ERROR_CODE_ALREADY_EXISTS = 1;
@@ -49,7 +42,6 @@ enum ErrorCode {
   ERROR_CODE_INTERNAL = 4;
 }
 
-// Сообщение об ошибке для детализированного ответа
 message Error {
   ErrorCode code = 1 [json_name = "code"];
   string message = 2 [json_name = "message"];

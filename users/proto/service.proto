@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package github.com.norovone.bigtech_go_msa_hw.users;
+
+import "proto/messages.proto";
+
+option go_package = "users/api;users";
+
+service UserService {
+  rpc CreateProfile(CreateProfileRequest) returns (UserProfile);
+  
+  rpc UpdateProfile(UpdateProfileRequest) returns (UserProfile);
+  
+  rpc GetProfileByID(GetProfileByIDRequest) returns (UserProfile);
+  
+  rpc GetProfileByNickname(GetProfileByNicknameRequest) returns (UserProfile);
+  
+  rpc SearchByNickname(SearchByNicknameRequest) returns (SearchByNicknameResponse);
+}

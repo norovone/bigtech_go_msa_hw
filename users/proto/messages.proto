@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+package github.com.norovone.bigtech_go_msa_hw.users;
+
+option go_package = "users/api;users";
+
+message CreateProfileRequest {
+  string user_id = 1 [json_name = "user_id"];
+  string nickname = 2 [json_name = "nickname"];
+  optional string bio = 3 [json_name = "bio"];
+  optional string avatar_url = 4 [json_name = "avatar_url"];
+}
+
+message UpdateProfileRequest {
+  string user_id = 1 [json_name = "user_id"];
+  optional string nickname = 2 [json_name = "nickname"];
+  optional string bio = 3 [json_name = "bio"];
+  optional string avatar_url = 4 [json_name = "avatar_url"];
+}
+
+message GetProfileByIDRequest {
+  string id = 1 [json_name = "id"];
+}
+
+message GetProfileByNicknameRequest {
+  string nickname = 1 [json_name = "nickname"];
+}
+
+message SearchByNicknameRequest {
+  string query = 1 [json_name = "query"];
+  int32 limit = 2 [json_name = "limit"];
+}
+
+message SearchByNicknameResponse {
+  repeated UserProfile results = 1;
+}
+
+message UserProfile {
+  string id = 1 [json_name = "id"];
+  string user_id = 2 [json_name = "user_id"];
+  string nickname = 3 [json_name = "nickname"];
+  string bio = 4 [json_name = "bio"];
+  string avatar_url = 5 [json_name = "avatar_url"];
+  string created_at = 6 [json_name = "created_at"];
+  string updated_at = 7 [json_name = "updated_at"];
+}
+
+// Ошибки
+enum ErrorCode {
+  ERROR_CODE_UNSPECIFIED = 0;
+  ERROR_CODE_ALREADY_EXISTS = 1;
+  ERROR_CODE_NOT_FOUND = 2;
+  ERROR_CODE_INVALID_ARGUMENT = 3;
+}

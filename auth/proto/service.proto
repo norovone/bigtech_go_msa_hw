@@ -7,12 +7,9 @@ import "proto/messages.proto";
 option go_package = "auth/api;auth";
 
 service AuthService {
-  // Регистрация нового пользователя
   rpc Register(RegisterRequest) returns (RegisterResponse);
   
-  // Аутентификация пользователя и выдача токенов
   rpc Login(LoginRequest) returns (LoginResponse);
   
-  // Перевыпуск JWT токенов
   rpc Refresh(RefreshRequest) returns (RefreshResponse);
 }

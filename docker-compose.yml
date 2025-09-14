@@ -1,11 +1,20 @@
 version: '3.8'
 
 services:
-  api:
+  auth:
     build: ./auth
     container_name: auth_service
     ports:
       - "8082:8082"
+    networks:
+      - go-network
+    restart: unless-stopped
+
+  users:
+    build: ./users
+    container_name: user_service
+    ports:
+      - "8083:8083"
     networks:
       - go-network
     restart: unless-stopped
