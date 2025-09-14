@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package github.com.norovone.bigtech_go_msa_hw.social;
+
+import "proto/messages.proto";
+
+import "google/protobuf/empty.proto";
+
+option go_package = "social/api;social";
+
+service SocialService {
+  rpc SendFriendRequest(SendFriendRequestRequest) returns (FriendRequest) {}
+  
+  rpc ListRequests(ListRequestsRequest) returns (ListRequestsResponse) {}
+  
+  rpc AcceptFriendRequest(AcceptFriendRequestRequest) returns (FriendRequest) {}
+  
+  rpc DeclineFriendRequest(DeclineFriendRequestRequest) returns (FriendRequest) {}
+  
+  rpc RemoveFriend(RemoveFriendRequest) returns (google.protobuf.Empty) {}
+  
+  rpc ListFriends(ListFriendsRequest) returns (ListFriendsResponse) {}
+}

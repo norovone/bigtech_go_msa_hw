@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+package github.com.norovone.bigtech_go_msa_hw.social;
+
+option go_package = "social/api;social";
+
+message SendFriendRequestRequest {
+  string user_id = 1 [json_name = "user_id"];
+}
+
+message ListRequestsRequest {
+  string user_id = 1 [json_name = "user_id"];
+}
+
+message ListRequestsResponse {
+  repeated FriendRequest requests = 1 [json_name = "requests"];
+}
+
+message AcceptFriendRequestRequest {
+  string request_id = 1 [json_name = "request_id"];
+}
+
+message DeclineFriendRequestRequest {
+  string request_id = 1 [json_name = "request_id"];
+}
+
+message RemoveFriendRequest {
+  string user_id = 1 [json_name = "user_id"];
+}
+
+message ListFriendsRequest {
+  string user_id = 1 [json_name = "user_id"];
+  int32 limit = 2 [json_name = "limit"];
+  optional string cursor = 3 [json_name = "cursor"];
+}
+
+message ListFriendsResponse {
+  repeated string friend_user_ids = 1 [json_name = "friend_user_ids"];
+  optional string next_cursor = 2 [json_name = "next_cursor"];
+}
+
+message FriendRequest {
+  string request_id = 1 [json_name = "request_id"];
+  FriendRequestStatus status = 2 [json_name = "status"];
+  
+  enum FriendRequestStatus {
+    PENDING = 0;
+    ACCEPTED = 1;
+    DECLINED = 2;
+  }
+}
+
+// Ошибки
+enum ErrorCode {
+  INVALID_ARGUMENT = 0;
+  ALREADY_EXISTS = 1;
+  NOT_FOUND = 2;
+  PERMISSION_DENIED = 3;
+}

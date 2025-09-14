@@ -19,6 +19,15 @@ services:
       - go-network
     restart: unless-stopped
 
+  social:
+    build: ./social
+    container_name: social_service
+    ports:
+      - "8084:8084"
+    networks:
+      - go-network
+    restart: unless-stopped
+
 networks:
   go-network:
     driver: bridge
