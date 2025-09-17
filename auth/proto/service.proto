@@ -2,12 +2,18 @@ syntax = "proto3";
 
 package github.com.norovone.bigtech_go_msa_hw.auth;
 
+import "proto/google/api/annotations.proto";
 import "proto/messages.proto";
 
 option go_package = "auth/api;auth";
 
 service AuthService {
-  rpc Register(RegisterRequest) returns (RegisterResponse);
+  rpc Register(RegisterRequest) returns (RegisterResponse) {
+    option (google.api.http) = {
+      post: "/v1/register"
+      body: "*"
+    };
+  };
   
   rpc Login(LoginRequest) returns (LoginResponse);
   

@@ -1,0 +1,207 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "proto/service.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "ChatService"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/v1/create_direct_chat": {
+      "post": {
+        "operationId": "ChatService_CreateDirectChat",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/chatCreateDirectChatResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/chatCreateDirectChatRequest"
+            }
+          }
+        ],
+        "tags": [
+          "ChatService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "chatChat": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/chatChatType"
+        },
+        "title": {
+          "type": "string"
+        },
+        "participant_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "chatChatType": {
+      "type": "string",
+      "enum": [
+        "CHAT_TYPE_UNSPECIFIED",
+        "CHAT_TYPE_DIRECT",
+        "CHAT_TYPE_GROUP",
+        "CHAT_TYPE_CHANNEL"
+      ],
+      "default": "CHAT_TYPE_UNSPECIFIED"
+    },
+    "chatCreateDirectChatRequest": {
+      "type": "object",
+      "properties": {
+        "participant_id": {
+          "type": "string"
+        }
+      }
+    },
+    "chatCreateDirectChatResponse": {
+      "type": "object",
+      "properties": {
+        "chat_id": {
+          "type": "string"
+        }
+      }
+    },
+    "chatGetChatResponse": {
+      "type": "object",
+      "properties": {
+        "chat": {
+          "$ref": "#/definitions/chatChat"
+        }
+      }
+    },
+    "chatListChatMembersResponse": {
+      "type": "object",
+      "properties": {
+        "user_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "chatListMessagesResponse": {
+      "type": "object",
+      "properties": {
+        "messages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/chatMessage"
+          }
+        },
+        "next_cursor": {
+          "type": "string"
+        }
+      }
+    },
+    "chatListUserChatsResponse": {
+      "type": "object",
+      "properties": {
+        "chats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/chatChat"
+          }
+        }
+      }
+    },
+    "chatMessage": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "chat_id": {
+          "type": "string"
+        },
+        "sender_id": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      }
+    },
+    "chatSendMessageResponse": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "$ref": "#/definitions/chatMessage"
+        }
+      }
+    },
+    "chatStreamMessagesResponse": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "$ref": "#/definitions/chatMessage"
+        }
+      }
+    },
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    }
+  }
+}

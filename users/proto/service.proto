@@ -3,11 +3,17 @@ syntax = "proto3";
 package github.com.norovone.bigtech_go_msa_hw.users;
 
 import "proto/messages.proto";
+import "proto/google/api/annotations.proto";
 
 option go_package = "users/api;users";
 
 service UserService {
-  rpc CreateProfile(CreateProfileRequest) returns (UserProfile);
+  rpc CreateProfile(CreateProfileRequest) returns (UserProfile) {
+    option (google.api.http) = {
+      post: "/v1/create_profile"
+      body: "*"
+    };
+  };
   
   rpc UpdateProfile(UpdateProfileRequest) returns (UserProfile);
   

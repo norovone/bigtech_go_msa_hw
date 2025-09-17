@@ -7,6 +7,7 @@
 package users
 
 import (
+	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -24,9 +25,9 @@ var File_proto_service_proto protoreflect.FileDescriptor
 
 const file_proto_service_proto_rawDesc = "" +
 	"\n" +
-	"\x13proto/service.proto\x12+github.com.norovone.bigtech_go_msa_hw.users\x1a\x14proto/messages.proto2\xfb\x05\n" +
-	"\vUserService\x12\x8c\x01\n" +
-	"\rCreateProfile\x12A.github.com.norovone.bigtech_go_msa_hw.users.CreateProfileRequest\x1a8.github.com.norovone.bigtech_go_msa_hw.users.UserProfile\x12\x8c\x01\n" +
+	"\x13proto/service.proto\x12+github.com.norovone.bigtech_go_msa_hw.users\x1a\x14proto/messages.proto\x1a\"proto/google/api/annotations.proto2\x9a\x06\n" +
+	"\vUserService\x12\xab\x01\n" +
+	"\rCreateProfile\x12A.github.com.norovone.bigtech_go_msa_hw.users.CreateProfileRequest\x1a8.github.com.norovone.bigtech_go_msa_hw.users.UserProfile\"\x1d\x82\xd3\xe4\x93\x02\x17:\x01*\"\x12/v1/create_profile\x12\x8c\x01\n" +
 	"\rUpdateProfile\x12A.github.com.norovone.bigtech_go_msa_hw.users.UpdateProfileRequest\x1a8.github.com.norovone.bigtech_go_msa_hw.users.UserProfile\x12\x8e\x01\n" +
 	"\x0eGetProfileByID\x12B.github.com.norovone.bigtech_go_msa_hw.users.GetProfileByIDRequest\x1a8.github.com.norovone.bigtech_go_msa_hw.users.UserProfile\x12\x9a\x01\n" +
 	"\x14GetProfileByNickname\x12H.github.com.norovone.bigtech_go_msa_hw.users.GetProfileByNicknameRequest\x1a8.github.com.norovone.bigtech_go_msa_hw.users.UserProfile\x12\x9f\x01\n" +

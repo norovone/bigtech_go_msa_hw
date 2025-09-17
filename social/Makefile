@@ -9,8 +9,8 @@ PROTO_PATH := $(CURDIR)/proto
 
 # Путь до сгенеренных .pb.go файлов
 GEN_PROTO_PATH := $(CURDIR)/api/gen
+GOOGLE_API_DIR=${PROTO_PATH}/google/api
 
-# устанавливаем необходимые плагины
 .bin-deps: export GOBIN := $(LOCAL_BIN)
 .bin-deps:
 	$(info Installing binary dependencies...)
@@ -18,12 +18,16 @@ GEN_PROTO_PATH := $(CURDIR)/api/gen
 	go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 	go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 
-# генерация .go файлов с помощью protoc
+	go install github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway@latest
+	go install github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2@latest
+
 .protoc-generate:
 	mkdir -p $(GEN_PROTO_PATH)
-	$(PROTOC) --proto_path=$(CURDIR) \
+	$(PROTOC) --proto_path=$(CURDIR) -I$(GOOGLE_API_DIR) \
 	--go_out=$(GEN_PROTO_PATH) --go_opt paths=source_relative \
 	--go-grpc_out=$(GEN_PROTO_PATH) --go-grpc_opt paths=source_relative \
+	--grpc-gateway_out=$(GEN_PROTO_PATH) --grpc-gateway_opt paths=source_relative \
+	--openapiv2_out=$(GEN_PROTO_PATH) \
 	$(PROTO_PATH)/service.proto \
 	$(PROTO_PATH)/messages.proto
 
@@ -36,7 +40,6 @@ generate: .bin-deps .protoc-generate .tidy
 
 # Билд приложения
 build:
-	go build -o $(LOCAL_BIN) ./cmd/client
 	go build -o $(LOCAL_BIN) ./cmd/server 
 	
 # Объявляем, что текущие команды не являются файлами и

@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  auth:
+  auth_service:
     build: ./auth
     container_name: auth_service
     ports:
@@ -10,7 +10,7 @@ services:
       - go-network
     restart: unless-stopped
 
-  users:
+  user_service:
     build: ./users
     container_name: user_service
     ports:
@@ -19,7 +19,7 @@ services:
       - go-network
     restart: unless-stopped
 
-  social:
+  social_service:
     build: ./social
     container_name: social_service
     ports:
@@ -28,7 +28,7 @@ services:
       - go-network
     restart: unless-stopped
 
-  chat:
+  chat_service:
     build: ./chat
     container_name: chat_service
     ports:
@@ -36,6 +36,18 @@ services:
     networks:
       - go-network
     restart: unless-stopped
+
+  api-gateway:
+    build: ./gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - auth_service
+      - user_service
+      - social_service
+      - chat_service
+    environment:
+      - PORT=8080
 
 networks:
   go-network:

@@ -2,14 +2,19 @@ syntax = "proto3";
 
 package github.com.norovone.bigtech_go_msa_hw.social;
 
+import "proto/google/api/annotations.proto";
 import "proto/messages.proto";
-
 import "google/protobuf/empty.proto";
 
 option go_package = "social/api;social";
 
 service SocialService {
-  rpc SendFriendRequest(SendFriendRequestRequest) returns (FriendRequest) {}
+  rpc SendFriendRequest(SendFriendRequestRequest) returns (FriendRequest) {
+    option (google.api.http) = {
+      post: "/v1/send_friend_request"
+      body: "*"
+    };
+  }
   
   rpc ListRequests(ListRequestsRequest) returns (ListRequestsResponse) {}
   

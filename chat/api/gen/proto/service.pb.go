@@ -7,6 +7,7 @@
 package chat
 
 import (
+	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -24,9 +25,9 @@ var File_proto_service_proto protoreflect.FileDescriptor
 
 const file_proto_service_proto_rawDesc = "" +
 	"\n" +
-	"\x13proto/service.proto\x12*github.com.norovone.bigtech_go_msa_hw.chat\x1a\x14proto/messages.proto2\xb5\b\n" +
-	"\vChatService\x12\x9f\x01\n" +
-	"\x10CreateDirectChat\x12C.github.com.norovone.bigtech_go_msa_hw.chat.CreateDirectChatRequest\x1aD.github.com.norovone.bigtech_go_msa_hw.chat.CreateDirectChatResponse\"\x00\x12\x84\x01\n" +
+	"\x13proto/service.proto\x12*github.com.norovone.bigtech_go_msa_hw.chat\x1a\"proto/google/api/annotations.proto\x1a\x14proto/messages.proto2\xd6\b\n" +
+	"\vChatService\x12\xc0\x01\n" +
+	"\x10CreateDirectChat\x12C.github.com.norovone.bigtech_go_msa_hw.chat.CreateDirectChatRequest\x1aD.github.com.norovone.bigtech_go_msa_hw.chat.CreateDirectChatResponse\"!\x82\xd3\xe4\x93\x02\x1b:\x01*\"\x16/v1/create_direct_chat\x12\x84\x01\n" +
 	"\aGetChat\x12:.github.com.norovone.bigtech_go_msa_hw.chat.GetChatRequest\x1a;.github.com.norovone.bigtech_go_msa_hw.chat.GetChatResponse\"\x00\x12\x96\x01\n" +
 	"\rListUserChats\x12@.github.com.norovone.bigtech_go_msa_hw.chat.ListUserChatsRequest\x1aA.github.com.norovone.bigtech_go_msa_hw.chat.ListUserChatsResponse\"\x00\x12\x9c\x01\n" +
 	"\x0fListChatMembers\x12B.github.com.norovone.bigtech_go_msa_hw.chat.ListChatMembersRequest\x1aC.github.com.norovone.bigtech_go_msa_hw.chat.ListChatMembersResponse\"\x00\x12\x90\x01\n" +
