@@ -4,10 +4,10 @@ go 1.25.1
 
 require (
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.27.2
-	github.com/norovone/bigtech_go_msa_hw/auth v0.0.0-20250917184131-ed751ceb7e93
-	github.com/norovone/bigtech_go_msa_hw/chat v0.0.0-20250917194302-c24205942cd2
-	github.com/norovone/bigtech_go_msa_hw/social v0.0.0-20250917194302-c24205942cd2
-	github.com/norovone/bigtech_go_msa_hw/users v0.0.0-20250917194302-c24205942cd2
+	github.com/norovone/bigtech_go_msa_hw/auth v0.0.0-20250917194302-c24205942cd2
+	github.com/norovone/bigtech_go_msa_hw/chat v0.0.0-20250917200356-4a7f0d7d145a
+	github.com/norovone/bigtech_go_msa_hw/social v0.0.0-20250917200356-4a7f0d7d145a
+	github.com/norovone/bigtech_go_msa_hw/users v0.0.0-20250917200356-4a7f0d7d145a
 	google.golang.org/grpc v1.75.1
 )
 
