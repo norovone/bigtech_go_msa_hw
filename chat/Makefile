@@ -25,7 +25,7 @@ GOOGLE_API_DIR=${PROTO_PATH}/google/api
 	--go-grpc_out=$(GEN_PROTO_PATH) --go-grpc_opt paths=source_relative \
 	--grpc-gateway_out=$(GEN_PROTO_PATH) --grpc-gateway_opt paths=source_relative \
 	--openapiv2_out=$(GEN_PROTO_PATH) \
-	$(PROTO_PATH)/service.proto \
+	$(PROTO_PATH)/chat_service.proto \
 	$(PROTO_PATH)/chat_messages.proto
 
 .tidy:

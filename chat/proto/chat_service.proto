@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package github.com.norovone.bigtech_go_msa_hw.chat;
+
+import "proto/google/api/annotations.proto";
+import "proto/chat_messages.proto";
+
+option go_package = "github.com/norovone/bigtech_go_msa_hw/chat/api;chat";
+
+service ChatService {
+  rpc CreateDirectChat(CreateDirectChatRequest) returns (CreateDirectChatResponse) {
+    option (google.api.http) = {
+      post: "/v1/create_direct_chat"
+      body: "*"
+    };
+  }
+  
+  rpc GetChat(GetChatRequest) returns (GetChatResponse) {}
+  
+  rpc ListUserChats(ListUserChatsRequest) returns (ListUserChatsResponse) {}
+  
+  rpc ListChatMembers(ListChatMembersRequest) returns (ListChatMembersResponse) {}
+  
+  rpc SendMessage(SendMessageRequest) returns (SendMessageResponse) {}
+  
+  rpc ListMessages(ListMessagesRequest) returns (ListMessagesResponse) {}
+  
+  rpc StreamMessages(StreamMessagesRequest) returns (stream StreamMessagesResponse) {}
+}
