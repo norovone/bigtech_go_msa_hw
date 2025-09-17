@@ -33,7 +33,7 @@ const file_proto_service_proto_rawDesc = "" +
 	"\x13AcceptFriendRequest\x12H.github.com.norovone.bigtech_go_msa_hw.social.AcceptFriendRequestRequest\x1a;.github.com.norovone.bigtech_go_msa_hw.social.FriendRequest\"\x00\x12\xa0\x01\n" +
 	"\x14DeclineFriendRequest\x12I.github.com.norovone.bigtech_go_msa_hw.social.DeclineFriendRequestRequest\x1a;.github.com.norovone.bigtech_go_msa_hw.social.FriendRequest\"\x00\x12k\n" +
 	"\fRemoveFriend\x12A.github.com.norovone.bigtech_go_msa_hw.social.RemoveFriendRequest\x1a\x16.google.protobuf.Empty\"\x00\x12\x94\x01\n" +
-	"\vListFriends\x12@.github.com.norovone.bigtech_go_msa_hw.social.ListFriendsRequest\x1aA.github.com.norovone.bigtech_go_msa_hw.social.ListFriendsResponse\"\x00B\x13Z\x11social/api;socialb\x06proto3"
+	"\vListFriends\x12@.github.com.norovone.bigtech_go_msa_hw.social.ListFriendsRequest\x1aA.github.com.norovone.bigtech_go_msa_hw.social.ListFriendsResponse\"\x00B9Z7github.com/norovone/bigtech_go_msa_hw/social/api;socialb\x06proto3"
 
 var file_proto_service_proto_goTypes = []any{
 	(*SendFriendRequestRequest)(nil),    // 0: github.com.norovone.bigtech_go_msa_hw.social.SendFriendRequestRequest

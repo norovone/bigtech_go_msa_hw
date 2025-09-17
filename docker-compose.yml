@@ -37,7 +37,8 @@ services:
       - go-network
     restart: unless-stopped
 
-  api-gateway:
+  api_gateway:
+    container_name: api_gateway
     build: ./gateway
     ports:
       - "8080:8080"

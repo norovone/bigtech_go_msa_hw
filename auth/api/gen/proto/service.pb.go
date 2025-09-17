@@ -29,7 +29,7 @@ const file_proto_service_proto_rawDesc = "" +
 	"\vAuthService\x12\x9e\x01\n" +
 	"\bRegister\x12;.github.com.norovone.bigtech_go_msa_hw.auth.RegisterRequest\x1a<.github.com.norovone.bigtech_go_msa_hw.auth.RegisterResponse\"\x17\x82\xd3\xe4\x93\x02\x11:\x01*\"\f/v1/register\x12|\n" +
 	"\x05Login\x128.github.com.norovone.bigtech_go_msa_hw.auth.LoginRequest\x1a9.github.com.norovone.bigtech_go_msa_hw.auth.LoginResponse\x12\x82\x01\n" +
-	"\aRefresh\x12:.github.com.norovone.bigtech_go_msa_hw.auth.RefreshRequest\x1a;.github.com.norovone.bigtech_go_msa_hw.auth.RefreshResponseB\x0fZ\rauth/api;authb\x06proto3"
+	"\aRefresh\x12:.github.com.norovone.bigtech_go_msa_hw.auth.RefreshRequest\x1a;.github.com.norovone.bigtech_go_msa_hw.auth.RefreshResponseB5Z3github.com/norovone/bigtech_go_msa_hw/auth/api;authb\x06proto3"
 
 var file_proto_service_proto_goTypes = []any{
 	(*RegisterRequest)(nil),  // 0: github.com.norovone.bigtech_go_msa_hw.auth.RegisterRequest

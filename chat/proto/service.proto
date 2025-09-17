@@ -5,7 +5,7 @@ package github.com.norovone.bigtech_go_msa_hw.chat;
 import "proto/google/api/annotations.proto";
 import "proto/messages.proto";
 
-option go_package = "chat/api;chat";
+option go_package = "github.com/norovone/bigtech_go_msa_hw/chat/api;chat";
 
 service ChatService {
   rpc CreateDirectChat(CreateDirectChatRequest) returns (CreateDirectChatResponse) {

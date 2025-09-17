@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package github.com.norovone.bigtech_go_msa_hw.social;
 
-option go_package = "social/api;social";
+option go_package = "github.com/norovone/bigtech_go_msa_hw/social/api;social";
 
 message SendFriendRequestRequest {
   string user_id = 1 [json_name = "user_id"];

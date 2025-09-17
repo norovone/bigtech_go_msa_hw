@@ -594,7 +594,7 @@ const file_proto_messages_proto_rawDesc = "" +
 	"\x10INVALID_ARGUMENT\x10\x00\x12\x12\n" +
 	"\x0eALREADY_EXISTS\x10\x01\x12\r\n" +
 	"\tNOT_FOUND\x10\x02\x12\x15\n" +
-	"\x11PERMISSION_DENIED\x10\x03B\x13Z\x11social/api;socialb\x06proto3"
+	"\x11PERMISSION_DENIED\x10\x03B9Z7github.com/norovone/bigtech_go_msa_hw/social/api;socialb\x06proto3"
 
 var (
 	file_proto_messages_proto_rawDescOnce sync.Once

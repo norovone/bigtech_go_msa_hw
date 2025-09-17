@@ -1036,7 +1036,7 @@ const file_proto_messages_proto_rawDesc = "" +
 	"\x15CHAT_TYPE_UNSPECIFIED\x10\x00\x12\x14\n" +
 	"\x10CHAT_TYPE_DIRECT\x10\x01\x12\x13\n" +
 	"\x0fCHAT_TYPE_GROUP\x10\x02\x12\x15\n" +
-	"\x11CHAT_TYPE_CHANNEL\x10\x03B\x0fZ\rchat/api;chatb\x06proto3"
+	"\x11CHAT_TYPE_CHANNEL\x10\x03B5Z3github.com/norovone/bigtech_go_msa_hw/chat/api;chatb\x06proto3"
 
 var (
 	file_proto_messages_proto_rawDescOnce sync.Once

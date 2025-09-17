@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package github.com.norovone.bigtech_go_msa_hw.chat;
 
-option go_package = "chat/api;chat";
+option go_package = "github.com/norovone/bigtech_go_msa_hw/chat/api;chat";
 
 enum ErrorCode {
   ERROR_CODE_UNSPECIFIED = 0;

@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package github.com.norovone.bigtech_go_msa_hw.auth;
 
-option go_package = "auth/api;auth";
+option go_package = "github.com/norovone/bigtech_go_msa_hw/auth/api;auth";
 
 message RegisterRequest {
   string email = 1 [json_name = "email"];

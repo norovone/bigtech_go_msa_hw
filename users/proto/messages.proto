@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package github.com.norovone.bigtech_go_msa_hw.users;
 
-option go_package = "users/api;users";
+option go_package = "github.com/norovone/bigtech_go_msa_hw/users/api;users";
 
 message CreateProfileRequest {
   string user_id = 1 [json_name = "user_id"];

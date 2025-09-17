@@ -6,7 +6,7 @@ import "proto/google/api/annotations.proto";
 import "proto/messages.proto";
 import "google/protobuf/empty.proto";
 
-option go_package = "social/api;social";
+option go_package = "github.com/norovone/bigtech_go_msa_hw/social/api;social";
 
 service SocialService {
   rpc SendFriendRequest(SendFriendRequestRequest) returns (FriendRequest) {

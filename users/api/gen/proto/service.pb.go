@@ -31,7 +31,7 @@ const file_proto_service_proto_rawDesc = "" +
 	"\rUpdateProfile\x12A.github.com.norovone.bigtech_go_msa_hw.users.UpdateProfileRequest\x1a8.github.com.norovone.bigtech_go_msa_hw.users.UserProfile\x12\x8e\x01\n" +
 	"\x0eGetProfileByID\x12B.github.com.norovone.bigtech_go_msa_hw.users.GetProfileByIDRequest\x1a8.github.com.norovone.bigtech_go_msa_hw.users.UserProfile\x12\x9a\x01\n" +
 	"\x14GetProfileByNickname\x12H.github.com.norovone.bigtech_go_msa_hw.users.GetProfileByNicknameRequest\x1a8.github.com.norovone.bigtech_go_msa_hw.users.UserProfile\x12\x9f\x01\n" +
-	"\x10SearchByNickname\x12D.github.com.norovone.bigtech_go_msa_hw.users.SearchByNicknameRequest\x1aE.github.com.norovone.bigtech_go_msa_hw.users.SearchByNicknameResponseB\x11Z\x0fusers/api;usersb\x06proto3"
+	"\x10SearchByNickname\x12D.github.com.norovone.bigtech_go_msa_hw.users.SearchByNicknameRequest\x1aE.github.com.norovone.bigtech_go_msa_hw.users.SearchByNicknameResponseB7Z5github.com/norovone/bigtech_go_msa_hw/users/api;usersb\x06proto3"
 
 var file_proto_service_proto_goTypes = []any{
 	(*CreateProfileRequest)(nil),        // 0: github.com.norovone.bigtech_go_msa_hw.users.CreateProfileRequest

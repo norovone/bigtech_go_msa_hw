@@ -537,7 +537,7 @@ const file_proto_messages_proto_rawDesc = "" +
 	"\x16ERROR_CODE_UNSPECIFIED\x10\x00\x12\x1d\n" +
 	"\x19ERROR_CODE_ALREADY_EXISTS\x10\x01\x12\x18\n" +
 	"\x14ERROR_CODE_NOT_FOUND\x10\x02\x12\x1f\n" +
-	"\x1bERROR_CODE_INVALID_ARGUMENT\x10\x03B\x11Z\x0fusers/api;usersb\x06proto3"
+	"\x1bERROR_CODE_INVALID_ARGUMENT\x10\x03B7Z5github.com/norovone/bigtech_go_msa_hw/users/api;usersb\x06proto3"
 
 var (
 	file_proto_messages_proto_rawDescOnce sync.Once

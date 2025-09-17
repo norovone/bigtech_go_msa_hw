@@ -33,7 +33,7 @@ const file_proto_service_proto_rawDesc = "" +
 	"\x0fListChatMembers\x12B.github.com.norovone.bigtech_go_msa_hw.chat.ListChatMembersRequest\x1aC.github.com.norovone.bigtech_go_msa_hw.chat.ListChatMembersResponse\"\x00\x12\x90\x01\n" +
 	"\vSendMessage\x12>.github.com.norovone.bigtech_go_msa_hw.chat.SendMessageRequest\x1a?.github.com.norovone.bigtech_go_msa_hw.chat.SendMessageResponse\"\x00\x12\x93\x01\n" +
 	"\fListMessages\x12?.github.com.norovone.bigtech_go_msa_hw.chat.ListMessagesRequest\x1a@.github.com.norovone.bigtech_go_msa_hw.chat.ListMessagesResponse\"\x00\x12\x9b\x01\n" +
-	"\x0eStreamMessages\x12A.github.com.norovone.bigtech_go_msa_hw.chat.StreamMessagesRequest\x1aB.github.com.norovone.bigtech_go_msa_hw.chat.StreamMessagesResponse\"\x000\x01B\x0fZ\rchat/api;chatb\x06proto3"
+	"\x0eStreamMessages\x12A.github.com.norovone.bigtech_go_msa_hw.chat.StreamMessagesRequest\x1aB.github.com.norovone.bigtech_go_msa_hw.chat.StreamMessagesResponse\"\x000\x01B5Z3github.com/norovone/bigtech_go_msa_hw/chat/api;chatb\x06proto3"
 
 var file_proto_service_proto_goTypes = []any{
 	(*CreateDirectChatRequest)(nil),  // 0: github.com.norovone.bigtech_go_msa_hw.chat.CreateDirectChatRequest
