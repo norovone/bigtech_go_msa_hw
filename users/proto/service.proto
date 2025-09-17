@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package github.com.norovone.bigtech_go_msa_hw.users;
 
-import "proto/messages.proto";
+import "proto/users_messages.proto";
 import "proto/google/api/annotations.proto";
 
 option go_package = "github.com/norovone/bigtech_go_msa_hw/users/api;users";
