@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.9
 // 	protoc        v3.21.12
-// source: proto/messages.proto
+// source: proto/users_messages.proto
 
 package users
 
@@ -58,11 +58,11 @@ func (x ErrorCode) String() string {
 }
 
 func (ErrorCode) Descriptor() protoreflect.EnumDescriptor {
-	return file_proto_messages_proto_enumTypes[0].Descriptor()
+	return file_proto_users_messages_proto_enumTypes[0].Descriptor()
 }
 
 func (ErrorCode) Type() protoreflect.EnumType {
-	return &file_proto_messages_proto_enumTypes[0]
+	return &file_proto_users_messages_proto_enumTypes[0]
 }
 
 func (x ErrorCode) Number() protoreflect.EnumNumber {
@@ -71,7 +71,7 @@ func (x ErrorCode) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use ErrorCode.Descriptor instead.
 func (ErrorCode) EnumDescriptor() ([]byte, []int) {
-	return file_proto_messages_proto_rawDescGZIP(), []int{0}
+	return file_proto_users_messages_proto_rawDescGZIP(), []int{0}
 }
 
 type CreateProfileRequest struct {
@@ -86,7 +86,7 @@ type CreateProfileRequest struct {
 
 func (x *CreateProfileRequest) Reset() {
 	*x = CreateProfileRequest{}
-	mi := &file_proto_messages_proto_msgTypes[0]
+	mi := &file_proto_users_messages_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -98,7 +98,7 @@ func (x *CreateProfileRequest) String() string {
 func (*CreateProfileRequest) ProtoMessage() {}
 
 func (x *CreateProfileRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_messages_proto_msgTypes[0]
+	mi := &file_proto_users_messages_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -111,7 +111,7 @@ func (x *CreateProfileRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateProfileRequest.ProtoReflect.Descriptor instead.
 func (*CreateProfileRequest) Descriptor() ([]byte, []int) {
-	return file_proto_messages_proto_rawDescGZIP(), []int{0}
+	return file_proto_users_messages_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *CreateProfileRequest) GetUserId() string {
@@ -154,7 +154,7 @@ type UpdateProfileRequest struct {
 
 func (x *UpdateProfileRequest) Reset() {
 	*x = UpdateProfileRequest{}
-	mi := &file_proto_messages_proto_msgTypes[1]
+	mi := &file_proto_users_messages_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -166,7 +166,7 @@ func (x *UpdateProfileRequest) String() string {
 func (*UpdateProfileRequest) ProtoMessage() {}
 
 func (x *UpdateProfileRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_messages_proto_msgTypes[1]
+	mi := &file_proto_users_messages_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -179,7 +179,7 @@ func (x *UpdateProfileRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UpdateProfileRequest.ProtoReflect.Descriptor instead.
 func (*UpdateProfileRequest) Descriptor() ([]byte, []int) {
-	return file_proto_messages_proto_rawDescGZIP(), []int{1}
+	return file_proto_users_messages_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *UpdateProfileRequest) GetUserId() string {
@@ -219,7 +219,7 @@ type GetProfileByIDRequest struct {
 
 func (x *GetProfileByIDRequest) Reset() {
 	*x = GetProfileByIDRequest{}
-	mi := &file_proto_messages_proto_msgTypes[2]
+	mi := &file_proto_users_messages_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -231,7 +231,7 @@ func (x *GetProfileByIDRequest) String() string {
 func (*GetProfileByIDRequest) ProtoMessage() {}
 
 func (x *GetProfileByIDRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_messages_proto_msgTypes[2]
+	mi := &file_proto_users_messages_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -244,7 +244,7 @@ func (x *GetProfileByIDRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetProfileByIDRequest.ProtoReflect.Descriptor instead.
 func (*GetProfileByIDRequest) Descriptor() ([]byte, []int) {
-	return file_proto_messages_proto_rawDescGZIP(), []int{2}
+	return file_proto_users_messages_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *GetProfileByIDRequest) GetId() string {
@@ -263,7 +263,7 @@ type GetProfileByNicknameRequest struct {
 
 func (x *GetProfileByNicknameRequest) Reset() {
 	*x = GetProfileByNicknameRequest{}
-	mi := &file_proto_messages_proto_msgTypes[3]
+	mi := &file_proto_users_messages_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -275,7 +275,7 @@ func (x *GetProfileByNicknameRequest) String() string {
 func (*GetProfileByNicknameRequest) ProtoMessage() {}
 
 func (x *GetProfileByNicknameRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_messages_proto_msgTypes[3]
+	mi := &file_proto_users_messages_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -288,7 +288,7 @@ func (x *GetProfileByNicknameRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetProfileByNicknameRequest.ProtoReflect.Descriptor instead.
 func (*GetProfileByNicknameRequest) Descriptor() ([]byte, []int) {
-	return file_proto_messages_proto_rawDescGZIP(), []int{3}
+	return file_proto_users_messages_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *GetProfileByNicknameRequest) GetNickname() string {
@@ -308,7 +308,7 @@ type SearchByNicknameRequest struct {
 
 func (x *SearchByNicknameRequest) Reset() {
 	*x = SearchByNicknameRequest{}
-	mi := &file_proto_messages_proto_msgTypes[4]
+	mi := &file_proto_users_messages_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -320,7 +320,7 @@ func (x *SearchByNicknameRequest) String() string {
 func (*SearchByNicknameRequest) ProtoMessage() {}
 
 func (x *SearchByNicknameRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_messages_proto_msgTypes[4]
+	mi := &file_proto_users_messages_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -333,7 +333,7 @@ func (x *SearchByNicknameRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SearchByNicknameRequest.ProtoReflect.Descriptor instead.
 func (*SearchByNicknameRequest) Descriptor() ([]byte, []int) {
-	return file_proto_messages_proto_rawDescGZIP(), []int{4}
+	return file_proto_users_messages_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *SearchByNicknameRequest) GetQuery() string {
@@ -359,7 +359,7 @@ type SearchByNicknameResponse struct {
 
 func (x *SearchByNicknameResponse) Reset() {
 	*x = SearchByNicknameResponse{}
-	mi := &file_proto_messages_proto_msgTypes[5]
+	mi := &file_proto_users_messages_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -371,7 +371,7 @@ func (x *SearchByNicknameResponse) String() string {
 func (*SearchByNicknameResponse) ProtoMessage() {}
 
 func (x *SearchByNicknameResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_messages_proto_msgTypes[5]
+	mi := &file_proto_users_messages_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -384,7 +384,7 @@ func (x *SearchByNicknameResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SearchByNicknameResponse.ProtoReflect.Descriptor instead.
 func (*SearchByNicknameResponse) Descriptor() ([]byte, []int) {
-	return file_proto_messages_proto_rawDescGZIP(), []int{5}
+	return file_proto_users_messages_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *SearchByNicknameResponse) GetResults() []*UserProfile {
@@ -409,7 +409,7 @@ type UserProfile struct {
 
 func (x *UserProfile) Reset() {
 	*x = UserProfile{}
-	mi := &file_proto_messages_proto_msgTypes[6]
+	mi := &file_proto_users_messages_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -421,7 +421,7 @@ func (x *UserProfile) String() string {
 func (*UserProfile) ProtoMessage() {}
 
 func (x *UserProfile) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_messages_proto_msgTypes[6]
+	mi := &file_proto_users_messages_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -434,7 +434,7 @@ func (x *UserProfile) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UserProfile.ProtoReflect.Descriptor instead.
 func (*UserProfile) Descriptor() ([]byte, []int) {
-	return file_proto_messages_proto_rawDescGZIP(), []int{6}
+	return file_proto_users_messages_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *UserProfile) GetId() string {
@@ -486,11 +486,11 @@ func (x *UserProfile) GetUpdatedAt() string {
 	return ""
 }
 
-var File_proto_messages_proto protoreflect.FileDescriptor
+var File_proto_users_messages_proto protoreflect.FileDescriptor
 
-const file_proto_messages_proto_rawDesc = "" +
+const file_proto_users_messages_proto_rawDesc = "" +
 	"\n" +
-	"\x14proto/messages.proto\x12+github.com.norovone.bigtech_go_msa_hw.users\"\x9f\x01\n" +
+	"\x1aproto/users_messages.proto\x12+github.com.norovone.bigtech_go_msa_hw.users\"\x9f\x01\n" +
 	"\x14CreateProfileRequest\x12\x18\n" +
 	"\auser_id\x18\x01 \x01(\tR\auser_id\x12\x1a\n" +
 	"\bnickname\x18\x02 \x01(\tR\bnickname\x12\x15\n" +
@@ -540,20 +540,20 @@ const file_proto_messages_proto_rawDesc = "" +
 	"\x1bERROR_CODE_INVALID_ARGUMENT\x10\x03B7Z5github.com/norovone/bigtech_go_msa_hw/users/api;usersb\x06proto3"
 
 var (
-	file_proto_messages_proto_rawDescOnce sync.Once
-	file_proto_messages_proto_rawDescData []byte
+	file_proto_users_messages_proto_rawDescOnce sync.Once
+	file_proto_users_messages_proto_rawDescData []byte
 )
 
-func file_proto_messages_proto_rawDescGZIP() []byte {
-	file_proto_messages_proto_rawDescOnce.Do(func() {
-		file_proto_messages_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_messages_proto_rawDesc), len(file_proto_messages_proto_rawDesc)))
+func file_proto_users_messages_proto_rawDescGZIP() []byte {
+	file_proto_users_messages_proto_rawDescOnce.Do(func() {
+		file_proto_users_messages_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_users_messages_proto_rawDesc), len(file_proto_users_messages_proto_rawDesc)))
 	})
-	return file_proto_messages_proto_rawDescData
+	return file_proto_users_messages_proto_rawDescData
 }
 
-var file_proto_messages_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_proto_messages_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
-var file_proto_messages_proto_goTypes = []any{
+var file_proto_users_messages_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
+var file_proto_users_messages_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
+var file_proto_users_messages_proto_goTypes = []any{
 	(ErrorCode)(0),                      // 0: github.com.norovone.bigtech_go_msa_hw.users.ErrorCode
 	(*CreateProfileRequest)(nil),        // 1: github.com.norovone.bigtech_go_msa_hw.users.CreateProfileRequest
 	(*UpdateProfileRequest)(nil),        // 2: github.com.norovone.bigtech_go_msa_hw.users.UpdateProfileRequest
@@ -563,7 +563,7 @@ var file_proto_messages_proto_goTypes = []any{
 	(*SearchByNicknameResponse)(nil),    // 6: github.com.norovone.bigtech_go_msa_hw.users.SearchByNicknameResponse
 	(*UserProfile)(nil),                 // 7: github.com.norovone.bigtech_go_msa_hw.users.UserProfile
 }
-var file_proto_messages_proto_depIdxs = []int32{
+var file_proto_users_messages_proto_depIdxs = []int32{
 	7, // 0: github.com.norovone.bigtech_go_msa_hw.users.SearchByNicknameResponse.results:type_name -> github.com.norovone.bigtech_go_msa_hw.users.UserProfile
 	1, // [1:1] is the sub-list for method output_type
 	1, // [1:1] is the sub-list for method input_type
@@ -572,29 +572,29 @@ var file_proto_messages_proto_depIdxs = []int32{
 	0, // [0:1] is the sub-list for field type_name
 }
 
-func init() { file_proto_messages_proto_init() }
-func file_proto_messages_proto_init() {
-	if File_proto_messages_proto != nil {
+func init() { file_proto_users_messages_proto_init() }
+func file_proto_users_messages_proto_init() {
+	if File_proto_users_messages_proto != nil {
 		return
 	}
-	file_proto_messages_proto_msgTypes[0].OneofWrappers = []any{}
-	file_proto_messages_proto_msgTypes[1].OneofWrappers = []any{}
+	file_proto_users_messages_proto_msgTypes[0].OneofWrappers = []any{}
+	file_proto_users_messages_proto_msgTypes[1].OneofWrappers = []any{}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_messages_proto_rawDesc), len(file_proto_messages_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_users_messages_proto_rawDesc), len(file_proto_users_messages_proto_rawDesc)),
 			NumEnums:      1,
 			NumMessages:   7,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_proto_messages_proto_goTypes,
-		DependencyIndexes: file_proto_messages_proto_depIdxs,
-		EnumInfos:         file_proto_messages_proto_enumTypes,
-		MessageInfos:      file_proto_messages_proto_msgTypes,
+		GoTypes:           file_proto_users_messages_proto_goTypes,
+		DependencyIndexes: file_proto_users_messages_proto_depIdxs,
+		EnumInfos:         file_proto_users_messages_proto_enumTypes,
+		MessageInfos:      file_proto_users_messages_proto_msgTypes,
 	}.Build()
-	File_proto_messages_proto = out.File
-	file_proto_messages_proto_goTypes = nil
-	file_proto_messages_proto_depIdxs = nil
+	File_proto_users_messages_proto = out.File
+	file_proto_users_messages_proto_goTypes = nil
+	file_proto_users_messages_proto_depIdxs = nil
 }
