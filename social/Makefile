@@ -29,7 +29,7 @@ GOOGLE_API_DIR=${PROTO_PATH}/google/api
 	--grpc-gateway_out=$(GEN_PROTO_PATH) --grpc-gateway_opt paths=source_relative \
 	--openapiv2_out=$(GEN_PROTO_PATH) \
 	$(PROTO_PATH)/service.proto \
-	$(PROTO_PATH)/messages.proto
+	$(PROTO_PATH)/social_messages.proto
 
 # go mod tidy
 .tidy:

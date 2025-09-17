@@ -25,7 +25,7 @@ var File_proto_service_proto protoreflect.FileDescriptor
 
 const file_proto_service_proto_rawDesc = "" +
 	"\n" +
-	"\x13proto/service.proto\x12*github.com.norovone.bigtech_go_msa_hw.auth\x1a\"proto/google/api/annotations.proto\x1a\x14proto/messages.proto2\xb1\x03\n" +
+	"\x13proto/service.proto\x12*github.com.norovone.bigtech_go_msa_hw.auth\x1a\"proto/google/api/annotations.proto\x1a\x19proto/auth_messages.proto2\xb1\x03\n" +
 	"\vAuthService\x12\x9e\x01\n" +
 	"\bRegister\x12;.github.com.norovone.bigtech_go_msa_hw.auth.RegisterRequest\x1a<.github.com.norovone.bigtech_go_msa_hw.auth.RegisterResponse\"\x17\x82\xd3\xe4\x93\x02\x11:\x01*\"\f/v1/register\x12|\n" +
 	"\x05Login\x128.github.com.norovone.bigtech_go_msa_hw.auth.LoginRequest\x1a9.github.com.norovone.bigtech_go_msa_hw.auth.LoginResponse\x12\x82\x01\n" +
@@ -58,7 +58,7 @@ func file_proto_service_proto_init() {
 	if File_proto_service_proto != nil {
 		return
 	}
-	file_proto_messages_proto_init()
+	file_proto_auth_messages_proto_init()
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{

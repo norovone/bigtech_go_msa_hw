@@ -25,7 +25,7 @@ var File_proto_service_proto protoreflect.FileDescriptor
 
 const file_proto_service_proto_rawDesc = "" +
 	"\n" +
-	"\x13proto/service.proto\x12*github.com.norovone.bigtech_go_msa_hw.chat\x1a\"proto/google/api/annotations.proto\x1a\x14proto/messages.proto2\xd6\b\n" +
+	"\x13proto/service.proto\x12*github.com.norovone.bigtech_go_msa_hw.chat\x1a\"proto/google/api/annotations.proto\x1a\x19proto/chat_messages.proto2\xd6\b\n" +
 	"\vChatService\x12\xc0\x01\n" +
 	"\x10CreateDirectChat\x12C.github.com.norovone.bigtech_go_msa_hw.chat.CreateDirectChatRequest\x1aD.github.com.norovone.bigtech_go_msa_hw.chat.CreateDirectChatResponse\"!\x82\xd3\xe4\x93\x02\x1b:\x01*\"\x16/v1/create_direct_chat\x12\x84\x01\n" +
 	"\aGetChat\x12:.github.com.norovone.bigtech_go_msa_hw.chat.GetChatRequest\x1a;.github.com.norovone.bigtech_go_msa_hw.chat.GetChatResponse\"\x00\x12\x96\x01\n" +
@@ -78,7 +78,7 @@ func file_proto_service_proto_init() {
 	if File_proto_service_proto != nil {
 		return
 	}
-	file_proto_messages_proto_init()
+	file_proto_chat_messages_proto_init()
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{

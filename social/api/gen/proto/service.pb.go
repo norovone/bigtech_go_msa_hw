@@ -26,7 +26,7 @@ var File_proto_service_proto protoreflect.FileDescriptor
 
 const file_proto_service_proto_rawDesc = "" +
 	"\n" +
-	"\x13proto/service.proto\x12,github.com.norovone.bigtech_go_msa_hw.social\x1a\"proto/google/api/annotations.proto\x1a\x14proto/messages.proto\x1a\x1bgoogle/protobuf/empty.proto2\xb0\a\n" +
+	"\x13proto/service.proto\x12,github.com.norovone.bigtech_go_msa_hw.social\x1a\"proto/google/api/annotations.proto\x1a\x1bproto/social_messages.proto\x1a\x1bgoogle/protobuf/empty.proto2\xb0\a\n" +
 	"\rSocialService\x12\xbc\x01\n" +
 	"\x11SendFriendRequest\x12F.github.com.norovone.bigtech_go_msa_hw.social.SendFriendRequestRequest\x1a;.github.com.norovone.bigtech_go_msa_hw.social.FriendRequest\"\"\x82\xd3\xe4\x93\x02\x1c:\x01*\"\x17/v1/send_friend_request\x12\x97\x01\n" +
 	"\fListRequests\x12A.github.com.norovone.bigtech_go_msa_hw.social.ListRequestsRequest\x1aB.github.com.norovone.bigtech_go_msa_hw.social.ListRequestsResponse\"\x00\x12\x9e\x01\n" +
@@ -72,7 +72,7 @@ func file_proto_service_proto_init() {
 	if File_proto_service_proto != nil {
 		return
 	}
-	file_proto_messages_proto_init()
+	file_proto_social_messages_proto_init()
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
